@@ -1,0 +1,198 @@
+<%- include ('./partials/productHeader') %>
+
+    <main>
+       
+      <section class="bg-white">
+        <div class="item-center text-center">
+            <a        href="/profile"
+                  class="bg-brightYellow text-black active:bg-darkYellow text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                  type="button"
+                  style="transition: all 0.15s ease 0s;"
+                >
+                Go Back
+      </a>
+        </div>
+        
+
+        <div class="flex flex-wrap justify-center text-center mb-4">
+          <div class="w-full lg:w-6/12 px-8">
+            <h2 class="text-4xl font-semibold text-black">Refer and Earn more</h2>
+             
+           
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-end text-right mb-12 mx-6">
+          
+        </div>
+    
+      <div class="flex flex-wrap items-center justify-center">
+    
+    
+      <div class="w-full p-2 m-auto shadow-lg ">
+       
+    </div>
+    
+    <div class="flex flex-col">
+        <div>
+            <p class="text-black text-xl">
+                Your referral  link
+            </p>
+        </div>
+    
+        
+    </div>
+    
+    
+    
+    
+    
+          </div>    
+        </section>
+        <div class="flex flex-row  ">
+
+        </div>
+        <div class="relative mb-4 flex flex-row items-center">
+          <input
+            type="text"
+            class="relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+            value="<%= currentUser.refLink %>"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+            id="myInput1" />
+          <button
+          id="show"
+            class="z-[2] inline-block rounded-r bg-brightYellow px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:z-[3] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+            data-te-ripple-init
+            type="button"
+            onclick="myFunction1()">
+            copy
+          </button>
+
+          <button
+            id="hide"
+            class="z-[2] hidden inline-block rounded-r bg-lightGreen px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:z-[3] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+            data-te-ripple-init
+            type="button"
+            >
+            copied
+          </button>
+        </div>
+
+        <section id="Transaction">
+          <div class="flex flex-wrap justify-center text-center mb-4">
+            <div class="w-full lg:w-6/12 px-4">
+              <h2 class="text-4xl font-semibold text-black">Your Referrals</h2>
+               
+             
+            </div>
+          </div>
+          
+          <div class="flex flex-col">
+            <div class="overflow-x-auto sm:-mx-6 lg:mx-6">
+              <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                <div class="overflow-hidden">
+                  <table class="min-w-full text-center text-sm font-light">
+                    <thead
+                      class="border-b bg-neutral-800 font-medium text-white dark:border-neutral-500 dark:bg-neutral-900">
+                      <tr>
+                        <th scope="col" class=" px-6 py-4">Email</th>
+                        <th scope="col" class=" px-6 py-4">Status</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="border-b dark:border-neutral-500">
+                        <div class="flex flex-col">
+                          <td class="whitespace-nowrap  px-6 py-4 font-medium">mycon@gmail.com</td>
+                         
+                        </div>
+                       
+                        <td class="whitespace-nowrap  px-6 py-4">No deposit yet</td>
+                        <td class="whitespace-nowrap  px-6 py-4">Deposited</td>  
+                      </tr>
+
+                      <tr class="border-b dark:border-neutral-500">
+                        <div class="flex flex-col">
+                          <td class="whitespace-nowrap  px-6 py-4 font-medium">mycon123@gmail.com</td>
+                         
+                        </div>
+                       
+                        <td class="whitespace-nowrap  px-6 py-4">No deposit yet</td>
+                        <td class="whitespace-nowrap  px-6 py-4">Deposited</td>  
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-4">
+            <h2 class="text-center text-3xl">
+              No Referrals Yet...
+            </h2>
+           
+          </div>
+
+          <div class="flex flex-col ">
+    
+            <div class="mx-6">
+                <h3 class="font-semibold text-2xl text-black">
+                    STARNDARD BONUS 
+                </h3>
+            </div>
+            <div class="mx-8"> 
+                <p class="text-xs md:text-xl my-6">
+                   1. Invite new members and you can get 13% 
+                </p>
+               
+            </div>
+        
+                  </div> 
+        </section>
+
+    </main>
+
+    <footer class="relative w-full bottom-0 bg-brightYellow pb-6">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-wrap items-center md:justify-between justify-center"
+        >
+          <div class="w-full  px-4">
+            <div class="text-sm text-black font-semibold py-1 text-center">
+                Copyright &copy;<script data-cfasync="false" ></script><script>document.write(new Date().getFullYear());</script> All rights reserved 
+             
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </footer>
+
+    
+  </body>
+  <script>
+    function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+
+    function myFunction1() {
+  var copyText = document.getElementById("myInput1");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  
+  
+  document.getElementById("show").style.display = "none"; 
+  document.getElementById("hide").style.display = "block"; 
+}
+
+    
+  </script>
+ </script>
+ <script src="javascripts/script.js">
+   
+ </script>
+
+</html>
